@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Api regression org" parallel="methods" thread-count="5">
+    <test name="Api tests">
+        <classes>
+            <class name="api.testsApi.user.CreateUserApiTest"/>
+            <class name="api.testsApi.user.GetUserApiTest"/>
+            <class name="api.testsApi.user.RemoveUserApiTest"/>
+
+        </classes>
+    </test>
+</suite>

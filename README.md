@@ -17,3 +17,6 @@ PREPARED STEPS:
 DESCRIPTION:
 
 
+REPORTS:
+In CLI:  > allure serve allure-results 
+

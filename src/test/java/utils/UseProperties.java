@@ -40,6 +40,13 @@ public class UseProperties {
                 token = propertyValue(PATH_TO_RESOURSE, PROPERTY_FILE_NAME, "apiRemoteToken");
                 dbURL=propertyValue(PATH_TO_RESOURSE,PROPERTY_FILE_NAME,"URL_DB");
             }
+            case "local":{
+                apiEndpoint = propertyValue(PATH_TO_RESOURSE, PROPERTY_FILE_NAME, "apiLocalEndpoint");
+                baseURL = propertyValue(PATH_TO_RESOURSE, PROPERTY_FILE_NAME, "localURL");
+                userName = propertyValue(PATH_TO_RESOURSE, PROPERTY_FILE_NAME, "username");
+                token = propertyValue(PATH_TO_RESOURSE, PROPERTY_FILE_NAME, "apiLocalToken");
+                dbURL=propertyValue(PATH_TO_RESOURSE,PROPERTY_FILE_NAME,"URL_DB");
+            }
             default: {
                 apiEndpoint = propertyValue(PATH_TO_RESOURSE, PROPERTY_FILE_NAME, "apiLocalEndpoint");
                 baseURL = propertyValue(PATH_TO_RESOURSE, PROPERTY_FILE_NAME, "localURL");

@@ -7,5 +7,5 @@ import static utils.UseProperties.setupInstanse;
 
 public class BaseApiTest {
     @BeforeMethod
-    public void setUp(){setupInstanse("");}
+    public void setUp(){setupInstanse("local");}
 }

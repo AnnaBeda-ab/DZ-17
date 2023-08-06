@@ -1,8 +1,0 @@
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Api regression org" parallel="methods" thread-count="5">
-    <test name="First trial test">
-        <classes>
-            <class name="api.testsApi.ApiTest"/>
-        </classes>
-    </test>
-</suite>
