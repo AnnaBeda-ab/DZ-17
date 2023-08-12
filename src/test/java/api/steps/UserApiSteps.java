@@ -8,10 +8,8 @@ import api.models.parameters.users.UserProperties;
 import io.restassured.common.mapper.TypeRef;
 import io.restassured.response.Response;
 
-import java.lang.reflect.Type;
-
 import static api.enums.UserRoles.USER;
-import static api.methods.User.*;
+import static api.methods.UserMethods.*;
 import static org.apache.hc.core5.http.HttpStatus.SC_OK;
 import static utils.UseProperties.token;
 import static utils.UseProperties.userName;

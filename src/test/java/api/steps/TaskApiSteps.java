@@ -3,11 +3,11 @@ package api.steps;
 import api.models.ResultResponse;
 import api.models.parameters.BodyCommon;
 import api.models.parameters.task.CreateTask;
-import api.models.parameters.task.TaskIdResponse;
+import api.models.parameters.task.TaskId;
 import io.restassured.response.Response;
 
-import static api.methods.Task.CREATE_TASK;
-import static api.methods.Task.DELETE_TASK;
+import static api.methods.TaskMethods.CREATE_TASK;
+import static api.methods.TaskMethods.DELETE_TASK;
 import static utils.UseProperties.token;
 import static utils.UseProperties.userName;
 
@@ -28,7 +28,7 @@ public class TaskApiSteps extends BaseApiSteps {
     }
     public boolean deleteTask (String taskID){
       BodyCommon bodyCommon = BodyCommon.builder()
-              .params(new TaskIdResponse(Integer.valueOf(taskID)))
+              .params(new TaskId(Integer.valueOf(taskID)))
               .method(DELETE_TASK)
               .build();
       Response response = postRequest(userName,token,bodyCommon);

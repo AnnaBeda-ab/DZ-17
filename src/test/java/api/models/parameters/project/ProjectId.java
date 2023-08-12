@@ -1,4 +1,4 @@
-package api.models.parameters.task;
+package api.models.parameters.project;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
@@ -9,7 +9,6 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class TaskIdResponse {
-    private Integer task_id;
-
+public class ProjectId {
+ private Integer project_id;
 }

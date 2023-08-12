@@ -1,0 +1,45 @@
+ID	Field	Fitures	Case	Expected	Notes
+	User Api Procedures	CreateUser	all required fields (username, password) fulfilled	result on success: user_id	
+			create user with existed username and password	result on failure: false	
+			create user with empty username, password is valid	result on failure: false	use dataprovider
+			create user with empty password, username is valid	result on failure: false	use dataprovider
+			create user with empty password  and username	result on failure: false	use dataprovider
+					
+		GetUser	create user, send request with his Id	result on success: user properties	
+			get user by unexisted Id	result on failure: null	
+			get user by Id = 0	result on failure: null	
+					
+		RemoveUser	delete existed user	result on success: true	
+			delete unexisted user	result on failure: false	
+			delete user which was deleted	result on failure: false	
+					
+	Project Api Procedures	CreateProject	required field (name) fulfilled	result on success: project_Id	
+			all fields fulfilled	result on success: project_Id	
+			required field is empty	result on failure: false	
+					
+		GetAllProjects	create project, send request	result on success: list of projects (properties)	
+					
+					
+		GetProjectById	id of existed project	result on success: project properties	
+			empty id field	result on failure: null	
+			id of unexisted project	result on failure: null	
+					
+		RemoveProject	id of existed project	result on success: true	
+			Id of deleted project	result on failure: false	
+			id of unexisted project	result on failure: false	
+			id field is empty	result on failure: false	
+					
+	Task Api Procedures	CreateTask	required fields (title, projectId) fulfield	result on success: task_id	
+			create task with existed title, projectId	result on failure: false	
+			create task with empty title,  valid projectId	result on failure: false	use dataprovider
+			create task with empty projectId,  valid title	result on failure: false	use dataprovider
+			create task with empty projectId and title	result on failure: false	use dataprovider
+					
+		GetTask	get by existed Id	result on success: task properties	
+			get by unexisted Id	result on failure: null	
+			get by empty Id	result on failure: null	
+					
+		RemoveTask	id of existed task	result on success: true	
+			id of deleted task	result on failure: false	
+			id of unexisted task	result on failure: false	
+			id field s empty	result on failure: false	
