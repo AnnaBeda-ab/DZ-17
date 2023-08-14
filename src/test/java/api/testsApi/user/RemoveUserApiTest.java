@@ -46,4 +46,11 @@ public class RemoveUserApiTest extends BaseApiTest {
         Assert.assertFalse(isDeleted.booleanValue(), "User was not deleted");
 
     }
+    @Test
+    @Description("Checks deleting of the user with id=0")
+    @Step("Delete user negative case (Id=0)")
+    public void deleteUserZeroIdtNegativeApiTest() {
+        Boolean isDeleted = userApiSteps.deleteUser("0");
+        Assert.assertFalse(isDeleted.booleanValue(), "User was not deleted");
+        userApiSteps.deleteUser(userId);}
 }

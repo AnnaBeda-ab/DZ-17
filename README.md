@@ -15,7 +15,16 @@ PREPARED STEPS:
 4. In browser: http://localhost/dashboard
 
 DESCRIPTION:
+Project structure:
+   -api
+methods src/test/java/api/methods - methods according to the documentation were described;
+models src/test/java/api/models - bodies of the requests/response were described
+(make use of jackson-databind library);
+steps src/test/java/api/steps - operatoins which can be done with certain fitures were described;
 
+  -dataBase 
+  
+Also were used - dataprovider, enums, .properties file to setup instanse values.
 
 REPORTS:
 In CLI:  > allure serve allure-results 

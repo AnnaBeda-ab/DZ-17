@@ -38,12 +38,13 @@ public class RemoveProjectApiTest extends BaseApiTest {
     public void deleteProjectUnexistedIdNegativeTest(){
         Boolean isDeleted = projectApiSteps.deleteProject(projectID+projectID);
         Assert.assertFalse(isDeleted,"Some project with unexisted id is deleted");
+
     }
     @Test
     @Description("")
     @Step("")
-    public void deleteProjectEmptyIdNegativeTest(){
-        Boolean isDeleted = projectApiSteps.deleteProject("");
+    public void deleteProjectZeroIdNegativeTest(){
+        Boolean isDeleted = projectApiSteps.deleteProject("0");
         Assert.assertFalse(isDeleted,"Some project with empty id is deleted");
     }
 

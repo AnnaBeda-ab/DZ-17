@@ -8,7 +8,7 @@ import api.models.parameters.project.ProjectProperties;
 import io.restassured.common.mapper.TypeRef;
 import io.restassured.response.Response;
 
-import java.lang.reflect.Type;
+
 import java.util.List;
 
 import static api.methods.ProjectMethods.*;
@@ -58,8 +58,7 @@ public class ProjectApiSteps extends BaseApiSteps {
                 .build();
         Response response = postRequest(userName, token, bodyCommon);
         response.then().statusCode(SC_OK);
-        return response.as(new TypeRef<ResultResponse<ProjectProperties>>() {
-        });
+        return response.as(new TypeRef<>() { });
     }
 
     public ResultResponse<List<ProjectProperties>> getAllProjects() {

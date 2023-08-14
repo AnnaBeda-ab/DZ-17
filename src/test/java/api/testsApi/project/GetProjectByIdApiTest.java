@@ -26,17 +26,17 @@ public class GetProjectByIdApiTest extends BaseApiTest {
     @Description("")
     @Step("")
     public void getProjectByIdPositiveApiTest(){
-       ResultResponse<ProjectProperties> projectPropertiesPesultResponce = projectApiSteps.getProjectById(projectID);
+       ResultResponse<ProjectProperties> projectPropertiesResultResponse = projectApiSteps.getProjectById(projectID);
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(projectPropertiesPesultResponce.getResult().getId(),projectID,"The project Id isn't match");
-        softAssert.assertEquals(projectPropertiesPesultResponce.getResult().getName(),PROJECT_NAME, "The project's name sn't match");
+        softAssert.assertEquals(Integer.valueOf(projectPropertiesResultResponse.getResult().getId()),Integer.valueOf(projectID),"The project Id isn't match");
+        softAssert.assertEquals(projectPropertiesResultResponse.getResult().getName(),PROJECT_NAME, "The project's name isn't match");
         softAssert.assertAll();
     }
     @Test
     @Description("")
     @Step("")
-    public void getProjectByIdEmptyNegativeApiTest(){
-        ResultResponse<ProjectProperties> projectPropertiesResultResponse = projectApiSteps.getProjectById("");
+    public void getProjectByIdZeroNegativeApiTest(){
+        ResultResponse<ProjectProperties> projectPropertiesResultResponse = projectApiSteps.getProjectById("0");
         Assert.assertNull(projectPropertiesResultResponse.getResult(),"The project is shown after requesting with empty Id");
     }
     @Test

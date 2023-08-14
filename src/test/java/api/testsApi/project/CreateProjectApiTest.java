@@ -31,12 +31,13 @@ public class CreateProjectApiTest extends BaseApiTest {
         projectId = projectApiSteps.createProjectAllFields(PROJECT_NAME);
         Assert.assertNotNull(projectId, "The project wasn't created");
     }
+
     @Test
     @Description("")
     @Step("")
-    public void createProjectNegativeApiTest(){
-        projectId=projectApiSteps.createProjectRequiredFields("");
-        Assert.assertFalse(Boolean.valueOf(projectId),"Project was created with empty required field");
+    public void createProjectNegativeApiTest() {
+        projectId = projectApiSteps.createProjectRequiredFields("0");
+        Assert.assertFalse(Boolean.valueOf(projectId), "Project was created with empty required field");
     }
 
     @AfterMethod(alwaysRun = true)
@@ -45,6 +46,18 @@ public class CreateProjectApiTest extends BaseApiTest {
         projectApiSteps.deleteProject(projectId);
 
     }
+
+
+//    @Test
+//    public  void clean() {
+//
+//        projectApiSteps.deleteProject("8");
+//        projectApiSteps.deleteProject("11");
+//        projectApiSteps.deleteProject("7");
+//        projectApiSteps.deleteProject("3");
+//        projectApiSteps.deleteProject("6");
+//
+//    }
 
 
 }
