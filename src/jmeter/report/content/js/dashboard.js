@@ -133,7 +133,7 @@ $(document).ready(function() {
         widgets: ['zebra']
     });
 
-    var data = {"OkPercent": 98.00995024875621, "KoPercent": 1.9900497512437811};
+    var data = {"OkPercent": 95.02487562189054, "KoPercent": 4.975124378109452};
     var dataset = [
         {
             "label" : "FAIL",
@@ -173,7 +173,7 @@ $(document).ready(function() {
     });
 
     // Creates APDEX table
-    createTable($("#apdexTable"), {"supportsControllersDiscrimination": true, "overall": {"data": [0.9776119402985075, 500, 1500, "Total"], "isController": false}, "titles": ["Apdex", "T (Toleration threshold)", "F (Frustration threshold)", "Label"], "items": [{"data": [0.96, 500, 1500, "HTTP Request Create Project"], "isController": false}, {"data": [1.0, 500, 1500, "HTTP Request Delete project"], "isController": false}, {"data": [0.5, 500, 1500, "OS Process Sampler - Java version checking"], "isController": false}]}, function(index, item){
+    createTable($("#apdexTable"), {"supportsControllersDiscrimination": true, "overall": {"data": [0.9477611940298507, 500, 1500, "Total"], "isController": false}, "titles": ["Apdex", "T (Toleration threshold)", "F (Frustration threshold)", "Label"], "items": [{"data": [0.9, 500, 1500, "HTTP Request Create Project"], "isController": false}, {"data": [1.0, 500, 1500, "HTTP Request Delete project"], "isController": false}, {"data": [0.5, 500, 1500, "OS Process Sampler - Java version checking"], "isController": false}]}, function(index, item){
         switch(index){
             case 0:
                 item = item.toFixed(3);
@@ -187,7 +187,7 @@ $(document).ready(function() {
     }, [[0, 0]], 3);
 
     // Create statistics table
-    createTable($("#statisticsTable"), {"supportsControllersDiscrimination": true, "overall": {"data": ["Total", 201, 4, 1.9900497512437811, 70.41293532338312, 18, 940, 36.0, 171.6000000000003, 276.6999999999988, 523.98, 20.150375939849624, 4.608885494987469, 8.741580513784461], "isController": false}, "titles": ["Label", "#Samples", "FAIL", "Error %", "Average", "Min", "Max", "Median", "90th pct", "95th pct", "99th pct", "Transactions/s", "Received", "Sent"], "items": [{"data": ["HTTP Request Create Project", 100, 4, 4.0, 82.95999999999998, 21, 524, 39.0, 228.40000000000003, 438.5999999999999, 523.99, 10.625863351397301, 2.438552624588248, 4.751545731059399], "isController": false}, {"data": ["HTTP Request Delete project", 100, 0, 0.0, 49.170000000000016, 18, 224, 30.5, 117.0, 184.74999999999994, 223.88999999999993, 11.148272017837236, 2.547554347826087, 4.735838210702341], "isController": false}, {"data": ["OS Process Sampler - Java version checking", 1, 0, 0.0, 940.0, 940, 940, 940.0, 940.0, 940.0, 940.0, 1.0638297872340425, 0.18388464095744683, 0.0], "isController": false}]}, function(index, item){
+    createTable($("#statisticsTable"), {"supportsControllersDiscrimination": true, "overall": {"data": ["Total", 201, 10, 4.975124378109452, 86.79601990049754, 16, 797, 31.0, 235.80000000000007, 534.0, 794.2799999999996, 19.998010148243957, 4.574035699184161, 8.675870249228932], "isController": false}, "titles": ["Label", "#Samples", "FAIL", "Error %", "Average", "Min", "Max", "Median", "90th pct", "95th pct", "99th pct", "Transactions/s", "Received", "Sent"], "items": [{"data": ["HTTP Request Create Project", 100, 10, 10.0, 113.77000000000001, 22, 797, 34.0, 523.2000000000006, 748.1999999999994, 796.98, 10.49317943336831, 2.4081027019937045, 4.6926236227702], "isController": false}, {"data": ["HTTP Request Delete project", 100, 0, 0.0, 53.09999999999998, 16, 250, 27.5, 183.10000000000005, 237.0, 249.98, 11.524720525527256, 2.6335787138411897, 4.895755301371442], "isController": false}, {"data": ["OS Process Sampler - Java version checking", 1, 0, 0.0, 759.0, 759, 759, 759.0, 759.0, 759.0, 759.0, 1.3175230566534915, 0.227735918972332, 0.0], "isController": false}]}, function(index, item){
         switch(index){
             // Errors pct
             case 3:
@@ -217,7 +217,7 @@ $(document).ready(function() {
     }, [[0, 0]], 0, summaryTableHeader);
 
     // Create error table
-    createTable($("#errorsTable"), {"supportsControllersDiscrimination": false, "titles": ["Type of error", "Number of errors", "% in errors", "% in all samples"], "items": [{"data": ["Assertion failed", 4, 100.0, 1.9900497512437811], "isController": false}]}, function(index, item){
+    createTable($("#errorsTable"), {"supportsControllersDiscrimination": false, "titles": ["Type of error", "Number of errors", "% in errors", "% in all samples"], "items": [{"data": ["Assertion failed", 10, 100.0, 4.975124378109452], "isController": false}]}, function(index, item){
         switch(index){
             case 2:
             case 3:
@@ -228,7 +228,7 @@ $(document).ready(function() {
     }, [[1, 1]]);
 
         // Create top5 errors by sampler
-    createTable($("#top5ErrorsBySamplerTable"), {"supportsControllersDiscrimination": false, "overall": {"data": ["Total", 201, 4, "Assertion failed", 4, "", "", "", "", "", "", "", ""], "isController": false}, "titles": ["Sample", "#Samples", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors"], "items": [{"data": ["HTTP Request Create Project", 100, 4, "Assertion failed", 4, "", "", "", "", "", "", "", ""], "isController": false}, {"data": [], "isController": false}, {"data": [], "isController": false}]}, function(index, item){
+    createTable($("#top5ErrorsBySamplerTable"), {"supportsControllersDiscrimination": false, "overall": {"data": ["Total", 201, 10, "Assertion failed", 10, "", "", "", "", "", "", "", ""], "isController": false}, "titles": ["Sample", "#Samples", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors"], "items": [{"data": ["HTTP Request Create Project", 100, 10, "Assertion failed", 10, "", "", "", "", "", "", "", ""], "isController": false}, {"data": [], "isController": false}, {"data": [], "isController": false}]}, function(index, item){
         return item;
     }, [[0, 0]], 0);
 
