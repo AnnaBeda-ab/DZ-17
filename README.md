@@ -3,7 +3,19 @@ robot_dreams school / QA automation course / SummaryProject
 
 ## GOALS:
 * to practice Java in API testing, in Web testing, making connection with Data Base
-* to practice JMeter as a tool for performance testing;
+* to practice JMeter as a tool for performance testing:
+
+  ***JDBC connection configuration***
+
+  ***JDBC request and assertions***
+
+  ***http(s) requests and assertions***
+
+  ***use User Defined variables, Random Defined variables, Authorization manager***
+   
+  ***generate script and make report from CLI***
+
+  
 * to use frameworks and libraries:  
 
      ***rest-assured***  
@@ -19,6 +31,9 @@ robot_dreams school / QA automation course / SummaryProject
      ***mariadb-java-client***
 
      ***allure-testng***
+
+
+* to config CI via Jenkins 
 
 ## PREPARED STEPS:
 1. Documentation:
@@ -45,6 +60,15 @@ Project structure:
 
 *src/test/java/api/steps* - operations/actions which can be done with certain fitures were described;
 
+  - JMeter
+
+*src/jmeter/Kanboard.jmx* - Test Plan for JMeter
+
+*src/jmeter/report* - reports
+
+*src/jmeter/results.csv* - log file
+
+
   - dataBase 
 ---
   
@@ -56,6 +80,8 @@ Also were used:
 ---
 [Screenshots of the reports](https://github.com/AnnaBeda-ab/DZ-17/blob/88a286e16dd0ff441649e5741a195585120298e8/src/images)
 
+---
+[JMeter report](https://github.com/AnnaBeda-ab/DZ-17/blob/78cab8ca1c08e1b5b1dbc3493fa39bc6e0a3af8d/src/jmeter/report/index.html)
 
 ## RUNS AND REPORTS:
 In CLI: 
@@ -69,3 +95,6 @@ In CLI:
 > 
 > > allure serve allure-results 
 
+> > jmeter -n -t "https://github.com/AnnaBeda-ab/DZ-17/blob/78cab8ca1c08e1b5b1dbc3493fa39bc6e0a3af8d/src/jmeter/Kanboard.jmx" -l "https://github.com/AnnaBeda-ab/DZ-17/blob/78cab8ca1c08e1b5b1dbc3493fa39bc6e0a3af8d/src/jmeter/results.csv" -f -e -o  "https://github.com/AnnaBeda-ab/DZ-17/blob/78cab8ca1c08e1b5b1dbc3493fa39bc6e0a3af8d/src/jmeter/report" -f
+>
+> > jmeter -g "https://github.com/AnnaBeda-ab/DZ-17/blob/78cab8ca1c08e1b5b1dbc3493fa39bc6e0a3af8d/src/jmeter/results.csv"  -o  "https://github.com/AnnaBeda-ab/DZ-17/blob/78cab8ca1c08e1b5b1dbc3493fa39bc6e0a3af8d/src/jmeter/report" -f
