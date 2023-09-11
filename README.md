@@ -32,6 +32,9 @@ robot_dreams school / QA automation course / SummaryProject
 
      ***allure-testng***
 
+
+* to config CI via Jenkins 
+
 ## PREPARED STEPS:
 1. Documentation:
 
