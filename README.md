@@ -98,4 +98,5 @@ In CLI:
 > > jmeter -n -t "Kanboard.jmx" -l "results.csv" -f -e -o  "report" -f
 >
 > > jmeter -g "results.csv"  -o  "report" -f
+> > 
 > > N.B. File "Kanboard.jmx" is in the directory ../jmeter/bin and run the command from here
