@@ -95,6 +95,7 @@ In CLI:
 > 
 > > allure serve allure-results 
 
-> > jmeter -n -t "https://github.com/AnnaBeda-ab/DZ-17/blob/78cab8ca1c08e1b5b1dbc3493fa39bc6e0a3af8d/src/jmeter/Kanboard.jmx" -l "https://github.com/AnnaBeda-ab/DZ-17/blob/78cab8ca1c08e1b5b1dbc3493fa39bc6e0a3af8d/src/jmeter/results.csv" -f -e -o  "https://github.com/AnnaBeda-ab/DZ-17/blob/78cab8ca1c08e1b5b1dbc3493fa39bc6e0a3af8d/src/jmeter/report" -f
+> > jmeter -n -t "Kanboard.jmx" -l "results.csv" -f -e -o  "report" -f
 >
-> > jmeter -g "https://github.com/AnnaBeda-ab/DZ-17/blob/78cab8ca1c08e1b5b1dbc3493fa39bc6e0a3af8d/src/jmeter/results.csv"  -o  "https://github.com/AnnaBeda-ab/DZ-17/blob/78cab8ca1c08e1b5b1dbc3493fa39bc6e0a3af8d/src/jmeter/report" -f
+> > jmeter -g "results.csv"  -o  "report" -f
+> > N.B. File "Kanboard.jmx" is in the directory ../jmeter/bin and run the command from here
